@@ -1,0 +1,33 @@
+<style>
+    .block {
+  display: block;
+  width: 25%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 10px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+</style>
+<center>
+    <form method="post">
+        {% csrf_token %}
+        <div class="input group">
+            <label for="city">Search for city:</label>
+            <input type="text" name = "city" size="30"><br><br>
+            <div>
+                <button type="submit" class="block">Search</button>
+            </div>
+        </div>
+    </form>
+</center>
+
+<center>
+    <h1>city: {{city}}</h1>
+    <h1>Country Code: {{country_code}}</h1>
+    <h1>Coordinate: {{coordinates}}</h1>
+    <h1>Temperature: {{temp}}</h1>
+    <h1>Pressure: {{pressure}}</h1>
+    <h1>Humidity: {{humidity}}</h1>
+</center>
